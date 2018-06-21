@@ -1,28 +1,26 @@
-package com.bovin.study.io.object;
+package com.bovin.study.io.serialize.s2;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
 /**
- * ObjectStreamTest
+ * SerializeTest2
  *
  * @author Bovin
  * Create on 2018/6/21
  */
-public class ObjectStreamTest {
-    private static final String TMP_FILE = "box.tmp";
+public class SerializeTest2 {
+    private static final String TMP_FILE = "SerializeTest2.txt";
 
     public static void main(String[] args) {
         testWrite();
         testRead();
     }
-
 
     /**
      * ObjectOutputStream 测试函数
@@ -31,21 +29,18 @@ public class ObjectStreamTest {
         try {
             ObjectOutputStream out = new ObjectOutputStream(
                     new FileOutputStream(TMP_FILE));
-            out.writeBoolean(true);
-            out.writeByte((byte)65);
-            out.writeChar('a');
-            out.writeInt(20131015);
-            out.writeFloat(3.14F);
-            out.writeDouble(1.414D);
+            out.writeBoolean(true);    // 写入Boolean值
+            out.writeByte((byte)65);// 写入Byte值
+            out.writeChar('a');     // 写入Char值
+            out.writeInt(20131015); // 写入Int值
+            out.writeFloat(3.14F);  // 写入Float值
+            out.writeDouble(1.414D);// 写入Double值
             // 写入HashMap对象
             HashMap map = new HashMap();
             map.put("one", "red");
             map.put("two", "green");
             map.put("three", "blue");
             out.writeObject(map);
-            // 写入自定义的Box对象，Box实现了Serializable接口
-            Box box = new Box("desk", 80, 48);
-            out.writeObject(box);
 
             out.close();
         } catch (Exception ex) {
@@ -73,9 +68,6 @@ public class ObjectStreamTest {
                 Map.Entry entry = (Map.Entry)iter.next();
                 System.out.printf("%-6s -- %s\n" , entry.getKey(), entry.getValue());
             }
-            // 读取Box对象，Box实现了Serializable接口
-            Box box = (Box) in.readObject();
-            System.out.println("box: " + box);
 
             in.close();
         } catch (Exception e) {
@@ -83,20 +75,3 @@ public class ObjectStreamTest {
         }
     }
 }
-class Box implements Serializable {
-    private int width;
-    private int height;
-    private String name;
-
-    public Box(String name, int width, int height) {
-        this.name = name;
-        this.width = width;
-        this.height = height;
-    }
-
-    @Override
-    public String toString() {
-        return "["+name+": ("+width+", "+height+") ]";
-    }
-}
-
