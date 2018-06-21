@@ -1,4 +1,4 @@
-package com.bovin.study.io;
+package com.bovin.study.io.bytearray;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
