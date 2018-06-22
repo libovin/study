@@ -9,6 +9,21 @@
 
 ## 1. 以字节为单位的输入流
 
+从中，我们可以看出。
+
+1. InputStream 是以字节为单位的输入流的超类。InputStream提供了read()接口从输入流中读取字节数据。
+2. ByteArrayInputStream 是字节数组输入流。它包含一个内部缓冲区，该缓冲区包含从流中读取的字节；通俗点说，它的内部缓冲区就是一个字节数组，而ByteArrayInputStream本质就是通过字节数组来实现的。
+3. PipedInputStream 是管道输入流，它和PipedOutputStream一起使用，能实现多线程间的管道通信。
+4. FilterInputStream 是过滤输入流。它是DataInputStream和BufferedInputStream的超类。
+5. DataInputStream 是数据输入流。它是用来装饰其它输入流，它“允许应用程序以与机器无关方式从底层输入流中读取基本 Java 数据类型”。
+6. BufferedInputStream 是缓冲输入流。它的作用是为另一个输入流添加缓冲功能。
+7. File 是“文件”和“目录路径名”的抽象表示形式。关于File，注意两点：
+    * File不仅仅只是表示文件，它也可以表示目录！
+    * File虽然在io保重定义，但是它的超类是Object，而不是InputStream。
+8. FileDescriptor 是“文件描述符”。它可以被用来表示开放文件、开放套接字等。
+9. FileInputStream 是文件输入流。它通常用于对文件进行读取操作。
+10. ObjectInputStream 是对象输入流。它和ObjectOutputStream一起，用来提供对“基本数据或对象”的持久存储。
+
 ## 2. 以字节为单位的输出流
 
 ## 3. 以字节为单位的输入流和输出流关联图
