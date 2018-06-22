@@ -1,3 +1,3 @@
 # 目录
 
-1. [java.io](./blob/master/io/directory.md)
+1. [java.io](./io/directory.md)
