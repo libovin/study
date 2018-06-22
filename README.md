@@ -29,7 +29,9 @@
 * b) 按照"流"中处理数据的单位，可以将其区分为：**字节流**和**字符流**。在java中，字节是占1个Byte，即8位；而字符是占2个Byte，即16位。而且，需要注意的是，java的字节是有符号类型，而字符是无符号类型！
 
 ```java
-public void main(String[] s){
-    System.out.print("Hello World");
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
 }
 ```
