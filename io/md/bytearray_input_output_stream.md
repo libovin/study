@@ -1,8 +1,9 @@
 # ByteArrayInputStream 和 ByteArrayOutputStream
 
-## ByteArrayInputStream.java 源码分析
-
 ByteArrayInputStream 是字节数组输入流。它继承于InputStream。  
+ByteArrayOutputStream 是字节数组输出流。它继承于OutputStream。
+
+## ByteArrayInputStream.java 源码分析
 
 **ByteArrayInputStream** **函数列表**  
 
@@ -136,8 +137,6 @@ ByteArrayInputStream实际上是通过“字节数组”去保存数据。
 5. mark(int readlimit)的作用是记录标记位置。记录标记位置之后，某一时刻调用reset()则将“字节流下一个被读取的位置”重置到“mark(int readlimit)所标记的位置”；也就是说，reset()之后再读取字节流时，是从mark(int readlimit)所标记的位置开始读取。
 
 ## ByteArrayOutputStream 源码分析
-
-ByteArrayOutputStream 是字节数组输出流。它继承于OutputStream。
 
 **ByteArrayOutputStream** **函数列表**  
 
