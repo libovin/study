@@ -2,7 +2,7 @@
 
 ![OutputStream_InputStream](../img/OutputStream_InputStream.jpg)
 **InputStream** **函数列表**  
-InputStream 是以字节为单位的输入流的超类。InputStream提供了read()接口从输入流中读取字节数据。
+InputStream 是以字节为单位的**输入流**的超类。InputStream提供了read()接口从输入流中读取字节数据。
 
 ```java
              int     available()
@@ -17,7 +17,7 @@ synchronized void    reset()
 ```
 
 **OutputStream** **函数列表**  
-OutputStream 是以字节为单位的输出流的超类。OutputStream提供了write()接口从输出流中读取字节数据。
+OutputStream 是以字节为单位的**输出流**的超类。OutputStream提供了write()接口从输出流中读取字节数据。
 
 ```java
          void    close()
@@ -27,7 +27,7 @@ OutputStream 是以字节为单位的输出流的超类。OutputStream提供了w
 abstract void    write(int oneByte)
 ```
 
-## InputStream.java源码分析
+## InputStream.java 源码分析
    
 ```java
 package java.io;
@@ -110,7 +110,7 @@ public abstract class InputStream implements Closeable {
 }
 ```
 
-## OutputStream.java源码分析
+## OutputStream.java 源码分析
 
 ```java
 package java.io;
