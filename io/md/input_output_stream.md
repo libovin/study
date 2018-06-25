@@ -26,6 +26,7 @@ abstract void    write(int oneByte)
 ```
 
 ## InputStream.java 源码分析
+
 InputStream 是以字节为单位的**输入流**的超类。InputStream提供了read()接口从输入流中读取字节数据。
 
 ```java

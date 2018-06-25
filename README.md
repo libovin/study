@@ -1,3 +1,4 @@
 # 目录
 
-1. [java.io](./io/directory.md)
+1. [Collections Framework](./collection/index.md)
+2. [java.io](./io/index.md)
